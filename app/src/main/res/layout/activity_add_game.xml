@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddGameActivity">
+
+    <EditText
+        android:id="@+id/editGameName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Название игры"
+        android:imeOptions="actionNext"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <EditText
+        android:id="@+id/editGameDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionNext"
+        android:lines="2"
+        android:ems="10"
+        android:hint="Описание игры"
+        app:layout_constraintTop_toBottomOf="@+id/editGameName"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <EditText
+        android:id="@+id/editGameImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:imeOptions="actionNext"
+        android:ems="10"
+        android:hint="Ссылка на картинку"
+        android:lines="2"
+        app:layout_constraintTop_toBottomOf="@+id/editGameDescription"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <EditText
+        android:id="@+id/editFIOStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:imeOptions="actionNext"
+        android:ems="10"
+        android:hint="ФИО студента"
+        app:layout_constraintTop_toBottomOf="@+id/editGameImage"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <EditText
+        android:id="@+id/editScoreStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:imeOptions="actionDone"
+        android:ems="10"
+        android:hint="Оценка"
+        app:layout_constraintTop_toBottomOf="@+id/editFIOStudent"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <Button
+        android:id="@+id/buttonAddGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Подтвердить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

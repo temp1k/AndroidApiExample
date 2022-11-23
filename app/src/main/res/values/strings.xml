@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Games</string>
+    <string name="return_to_page">Вернуться</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <integer name="text_size_for_edits">16</integer>
+</resources>
