@@ -17,6 +17,7 @@ import com.example.api_example.GamePage;
 import com.example.api_example.Models.Game;
 import com.example.api_example.Models.Manga;
 import com.example.api_example.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -39,6 +40,11 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.gameTitle.setText(games.get(position).getGame_Name());
+        Picasso.with(context.getApplicationContext())
+                .load(games.get(position).getGame_Img())
+                .placeholder(R.drawable.placeholder_error_foreground)
+                .error(R.drawable.placeholder_error_foreground)
+                .into(holder.gameImage);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +73,7 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
             super(itemView);
 
             gameTitle = itemView.findViewById(R.id.name_game);
+            gameImage = itemView.findViewById(R.id.imageGameItem);
         }
     }
 }
